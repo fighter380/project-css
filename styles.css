@@ -3,6 +3,11 @@ body {
   background-color: violet;
   margin: 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100vh;           /* pleine hauteur de la fenêtre */
+  margin: 0;
 }
 
 /* ===== Carte de profile ===== */
@@ -56,8 +61,16 @@ body {
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
+  body {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100vh;           /* pleine hauteur de la fenêtre */
+  margin: 0;
+}
+
   .profile-card-container {
-    max-width: 70%;
+    max-width: 75%;
     padding: 15px;
   }
   .profile-card {
@@ -76,21 +89,34 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100vh;           /* pleine hauteur de la fenêtre */
+  margin: 0;
+}
+
+  }
   .profile-card-container {
-    max-width: 90%;
     padding: 10px;
+    height: -50px;
+    justify-content: center;    /* centre horizontalement */
+    align-items: center;
   }
   .profile-card {
     font-size: 22px;
+    padding: 25px;
   }
   .name-card {
     font-size: 18px;
+    padding-top: 15px;
   }
-  .description-card {
+  .description-card{
+    padding-top: 20px;
     font-size: 14px;
   }
   .photo-profile {
     width: 100px;
     height: 100px;
   }
-}
