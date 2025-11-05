@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple carte de profile</title>
+    <title>Le hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<header>
+    
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/Menu/index.html" class="nav-btn">
+        <img src="accueil.png"Accueil" class="nav-icon">
+        <span class="nav-text">Accueil</span>
+      </a>
+      <a href="/project-page/project1/project1.html" class="nav-btn">
+        <img src="project-icon.png" alt="Projets" class="nav-icon">
+        <span class="nav-text">Projets</span>
+      </a>
+      <a href="/Menu/contact.html" class="nav-btn">
+        <img src="appdm.png" alt="À propos" class="nav-icon">
+        <span class="nav-text">À propos de moi</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+</header>
 <body>
-    <div class="profile-card-container">
-       <h1 class="profile-card">Carte de profile</h1>
-        <img src="pp.jpg" alt="Photo de profile" class="photo-profile">
-        <h2 class="name-card">Camille Valentin</h2>
-        <h2 class="description-card">💻 Débutant en dev | Apprenti codeur | Toujours prêt à créer des petites cartes et tester de nouvelles idées !</h2>
+    <h1 class="title-project">Mes projets en CSS</h1>
+
+    <div class="container-project">
+        <!-- Projet 1 -->
+        <a href="/project-page/project1/project1.html" class="project-card">
+            <h2>Premier projet</h2>
+            <img src="project1.png" alt="Aperçu projet 1" class="preview-project1">
+        </a>
+
+        <!-- Project 2-->
+        <a href="project2.html" class="project-card">
+            <h2>Deuxième projet</h2>
+            <img src="project2.png" alt="Aperçu projet 2" class="preview-project2">
+        </a>
+
+        <!-- À venir -->
+        <a href="#" class="project-card disabled">
+            <h2>🚧 Bientôt disponible 🚧</h2>
+        </a>
     </div>
 </body>
 </html>

@@ -1,122 +1,96 @@
-/* ===== Body ===== */
 body {
   background-color: violet;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center; /* centre horizontalement */
-  align-items: center;     /* centre verticalement */
-  height: 100vh;           /* pleine hauteur de la fenêtre */
-  margin: 0;
+  font-family: sans-serif;
+}
+.navbar {
+  padding: 10px 0;
 }
 
-/* ===== Carte de profile ===== */
-.profile-card-container {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  max-width: 300px;
-  display: block;
-  margin: 50px auto;
-  border-radius: 30px;
-  background-color: white;
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Chaque bouton (box) */
+.nav-btn {
+  display: flex;          /* image à gauche, texte à droite */
+  align-items: center;    /* centre verticalement */
+  gap: 10px;              /* espace entre image et texte */
+  background-color:white;
+  color: rgb(0, 0, 0);
+  text-decoration: none;  /* enlève le soulignement */
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.profile-card-container:hover {
-  background-color: blueviolet;
-  transform: scale(1.05); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.nav-btn:hover {
+  background-color: rgb(180,0,255);
+  transform: scale(1.05);
 }
 
-/* ===== Titre ===== */
-.profile-card {
+/* Image à l'intérieur du bouton */
+.nav-icon {
+  width: 20px;       /* largeur réduite */
+  height: 20px;      /* hauteur réduite */
+  object-fit: contain;
+}
+
+/* Texte à côté de l'image */
+.nav-text {
+  white-space: nowrap; /* empêche le texte de passer à la ligne */
+}
+
+
+
+.title-project {
   text-align: center;
-  font-size: 28px;
-  margin: 0 0 15px 0;
+  font-size: 36px;
+  margin: 20px 0;
 }
 
-/* ===== Photo ===== */
-.photo-profile {
-  border-radius: 50%;
+.container-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;     /* Centre verticalement */
+  height: 100vh;    
+  gap: 40px;
+  padding: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none; /* enlève le soulignement du lien */
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  width: 300px
+}
+
+.project-card:hover {
+  background-color: blueviolet;
+  transform: scale(1.05);
+  color: white;
+}
+
+.preview-project1 {
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.preview-project2{
   width: 150px;
   height: 150px;
-  display: block;
-  margin: 0 auto 15px auto;
-  object-fit: cover; /* pour garder les proportions de l’image */
+  object-fit : cover;
+  margin-top: 10px;
 }
-
-/* ===== Nom ===== */
-.name-card {
-  text-align: center;
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-/* ===== Description ===== */
-.description-card {
-  text-align: center;
-  font-size: 17px;
-  line-height: 1.4;
-}
-
-/* ===== Media Queries ===== */
-@media (max-width: 768px) {
-  body {
-  display: flex;
-  justify-content: center; /* centre horizontalement */
-  align-items: center;     /* centre verticalement */
-  height: 100vh;           /* pleine hauteur de la fenêtre */
-  margin: 0;
-}
-
-  .profile-card-container {
-    max-width: 75%;
-    padding: 15px;
-  }
-  .profile-card {
-    font-size: 24px;
-  }
-  .name-card {
-    font-size: 20px;
-  }
-  .description-card {
-    font-size: 16px;
-  }
-  .photo-profile {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-  display: flex;
-  justify-content: center; /* centre horizontalement */
-  align-items: center;     /* centre verticalement */
-  height: 100vh;           /* pleine hauteur de la fenêtre */
-  margin: 0;
-}
-
-  }
-  .profile-card-container {
-    padding: 10px;
-    height: -50px;
-    justify-content: center;    /* centre horizontalement */
-    align-items: center;
-  }
-  .profile-card {
-    font-size: 22px;
-    padding: 25px;
-  }
-  .name-card {
-    font-size: 18px;
-    padding-top: 15px;
-  }
-  .description-card{
-    padding-top: 20px;
-    font-size: 14px;
-  }
-  .photo-profile {
-    width: 100px;
-    height: 100px;
-  }
